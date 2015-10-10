@@ -41,13 +41,23 @@ public class SampleTest extends AppiumTestBase
     @Test
     public void testHomePageHeadline() throws IOException {
 
+        AkazeImageFinder.QueryImage("Step3.png", "R2.png");
+        if(true)
+            return;
         System.out.println("TestStart");
         
         takeScreenshot("progress-1");
-        Assert.assertFalse(TapImage("Step1.png"));
+        Assert.assertTrue(TapImage("Step1.png"));
+        Wait(2000);
         takeScreenshot("progress-2");
-        Assert.assertFalse(TapImage("ClickDone.png"));
+        
+        Assert.assertTrue(TapImage("Step2.png"));
         takeScreenshot("progress-3");
+        Wait(2000);
+        
+        Assert.assertTrue(TapImage("Step3.png"));
+        takeScreenshot("progress-3");
+        Wait(2000);
         
         System.out.println("TestDone");
     }
