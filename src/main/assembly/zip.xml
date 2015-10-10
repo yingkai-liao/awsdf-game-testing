@@ -45,20 +45,12 @@
                 <include>*.png</include>
             </includes>
         </fileSet>
-
-        <fileSet>
-            <directory>${project.basedir}</directory>
-            <outputDirectory>./</outputDirectory>
-            <includes>
-                <include>/akaze/</include>
-            </includes>
-        </fileSet>
         
         <fileSet>
             <directory>${project.basedir}</directory>
             <outputDirectory>./</outputDirectory>
             <includes>
-                <include>/opencv-2.4.9/</include>
+                <include>/opencv-3.0.0/</include>
             </includes>
         </fileSet>
         
