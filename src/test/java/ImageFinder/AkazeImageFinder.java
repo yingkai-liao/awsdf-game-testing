@@ -64,6 +64,7 @@ public class AkazeImageFinder {
 
         detector.detect(result.img, result.keypoints);
         extractor.compute(result.img, result.keypoints, result.descriptors);
+        
         return result;
     }
 

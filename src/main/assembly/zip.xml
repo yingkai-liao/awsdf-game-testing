@@ -42,7 +42,7 @@
             <directory>${project.basedir}</directory>
             <outputDirectory>./</outputDirectory>
             <includes>
-                <include>*.png</include>
+                <include>/queryimages/</include>
             </includes>
         </fileSet>
         

@@ -1,6 +1,6 @@
 package Tests;
 
-import static Tests.SampleTest.driver;
+import static Tests.GameStartTest.driver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import java.io.File;
@@ -19,7 +19,9 @@ public abstract class AppiumTestBase
     }
     
     public static AndroidDriver driver;    
-    static testPlatform target = testPlatform.Aws;
+    static final testPlatform target = testPlatform.Aws;
+    
+    public static boolean isLocal(){return target == testPlatform.Localhost;}
     
     @BeforeSuite
     public void setUpAppium() throws MalformedURLException 
@@ -39,6 +41,7 @@ public abstract class AppiumTestBase
 
             DesiredCapabilities setting = new DesiredCapabilities();
             setting.setCapability("deviceName", "TestAndroidDevice");
+            setting.setCapability("avd","NewOne");
             setting.setCapability("app", new File("demo2048.apk").getAbsolutePath());
 
             setting.setCapability("deviceReadyTimeout", 5);
