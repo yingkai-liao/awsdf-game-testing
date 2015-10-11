@@ -10,7 +10,7 @@ public class GameStartTest extends AppiumTestBase {
     public void waitAppStart() {
         System.out.println("waitAppStart");
         //wait for loading 
-        TestUtil.Wait(20000);
+        TestUtil.Wait(5000);
         Assert.assertTrue(TestUtil.WaitingForIamge("queryimages/Step1.png", 30));
 
         System.out.println("AppStart!");

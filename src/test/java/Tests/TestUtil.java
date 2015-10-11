@@ -9,7 +9,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import static Tests.AppiumTestBase.driver;
-import Tests.AppiumTestBase;
 import java.math.BigInteger;
 
 public class TestUtil 
